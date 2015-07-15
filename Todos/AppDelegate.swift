@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        var navigationBarAppearence = UINavigationBar.appearance()
+        navigationBarAppearence.tintColor = AppDelegate.UIColorFromRGB(0xffffff)
+        navigationBarAppearence.barTintColor = AppDelegate.UIColorFromRGB(0x3AAFDA)
+        navigationBarAppearence.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
         return true
     }
 
@@ -41,6 +45,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    static func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
+    
 }
 
