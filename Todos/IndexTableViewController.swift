@@ -79,7 +79,7 @@ class IndexTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         var view = UIView() // The width will be the same as the cell, and the height should be set in tableView:heightForRowAtIndexPath:
-        var label = UILabel(frame: CGRectMake(17,10,tableView.frame.size.width/2, 20))
+        var label = UILabel(frame: CGRectMake(17,11,tableView.frame.size.width/2, 20))
         label.text = self.projects[section].projname.uppercaseString
         label.font = UIFont.boldSystemFontOfSize(12.0)
         let views = ["label": label,"view": view]

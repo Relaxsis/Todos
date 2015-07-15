@@ -110,11 +110,11 @@ class NewTodoTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         var view = UIView()
-        var label = UILabel(frame: CGRectMake(17,10,tableView.frame.size.width/2, 20))
+        var label = UILabel(frame: CGRectMake(17,11,tableView.frame.size.width/2, 20))
         if section == 0 {
-            label.text = "Задача" }
+            label.text = "ЗАДАЧА" }
         else {
-            label.text = "Категория"
+            label.text = "КАТЕГОРИЯ"
         }
         label.font = UIFont.boldSystemFontOfSize(12.0)
         let views = ["label": label,"view": view]
