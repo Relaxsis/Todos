@@ -42,17 +42,15 @@ class NewTodoTableViewController: UITableViewController {
          var cell:UITableViewCell = (tableView.cellForRowAtIndexPath(selectedProject!) as UITableViewCell!)!
          var id = 0
          if cell.textLabel?.text == "Семья" {
-             println("!!!")
-             id = 1
+            id = 1
          }
          if cell.textLabel?.text == "Работа" {
              id = 2
-             println("rabota")
          }
          if cell.textLabel?.text == "Прочее" {
              id = 3
-             println("asdaqeqwe")
          }
+            
          let parameters = [
              "todo": [
                  "dotext": inputText,
